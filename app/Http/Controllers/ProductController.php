@@ -15,6 +15,7 @@ class ProductController extends Controller
         $this->product = $product;
     }
 
+    //제품 목록
     public function index(){
         // products 의 데이터를 최신순으로 페이징을 해서 가져옴.
         $products = $this->product->latest()->paginate(10);
@@ -22,6 +23,7 @@ class ProductController extends Controller
         return view('products.index', compact('products')); //
     }
 
+    //제품 생성
     public function create(){
             return view('products.create');
         }
@@ -47,11 +49,11 @@ class ProductController extends Controller
 
     //업데이트 기능
     public function update(Request $request, Product $product){
-        $request = $request->validate([
+        $request = $request->validate([ //수정할 때 유효성 검사를 진행
             'name' => 'required',
             'content' => 'required'
         ]);
-        // $product는 수정할 모델 값이므로 바로 업데이트 해줍시다.
+        // $product는 수정할 모델 값이므로 바로 업데이트 해줘야 함.
         $product->update($request);
         return redirect()->route('products.index', $product);
     }

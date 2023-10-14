@@ -22,7 +22,7 @@
             <th scope="col">Number</th>
             <th scope="col">Name</th>
             <th scope="col">Created At</th>
-            <th scope="col"></th>
+            <th scope="col">Edit/Delete</th>
         </tr>
         </thead>
         <tbody>
@@ -50,6 +50,7 @@
         </tbody>
     </table>
 
-    {{-- 라라벨 기본 지원 페이지네이션 --}}
-    {!! $products->links() !!}
+     {{-- 라라벨 기본 지원 페이지네이션 --}}
+     {{-- 라라벨의 지원 스타일을 적용해야 함 --}}
+     {!! $products->links() !!}
 @endsection

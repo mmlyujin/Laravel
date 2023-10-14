@@ -14,8 +14,8 @@ use App\Http\Controllers\ProductController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 //사용자의 요청에 따라 어느 Controller로 동작할지 정해주는 Route 설정을 여기서 진행.
+
 //처음 볼 수 있는 라라벨 기본 화면에 대한 라우팅 설정이 이거임.
 Route::get('/', function () {
     return view('welcome');
