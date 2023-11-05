@@ -9,12 +9,15 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void //php artisan migrate 시 실행되는 함수
+    public function up(): void
+    //php artisan migrate 시 실행되는 함수
+    //DB 스키마 정의
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 64)->default('');
+            $table->string('name', 64);
             $table->string('content', 256);
+            $table->string('call', 16)->nullable();
             $table->timestamps();
         });
     }

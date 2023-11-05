@@ -37,7 +37,7 @@ class StoreProductRequest extends FormRequest
                    'name.required' => '제목이 비어있습니다.',
                    'name.max' => '제목은 10자 이하입니다.',
                    'content.required' => '내용이 비어있습니다.',
-                   'content.max' => '내용은 255자 이하입니다. 너무 길어욥.',
+                   'content.max' => '내용은 255자 이하입니다. 너무 길어요~',
                ];
            }
 }

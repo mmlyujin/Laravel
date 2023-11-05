@@ -19,6 +19,7 @@
 
     <form action="{{route('products.store')}}" method="post">
         {{-- 라라벨은 CSRF로 부터 보호하기 위해 데이터를 등록할 때의 위조를 체크 하기 위해 아래 코드가 필수 --}}
+        {{-- old는 전역 헬퍼 함수로 blade 내에서 이전 Request 입력값을 가져와 준다. --}}
         @csrf
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>

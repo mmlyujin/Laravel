@@ -20,7 +20,7 @@ class ProductController extends Controller
         // products 의 데이터를 최신순으로 페이징을 해서 가져옴.
         $products = $this->product->latest()->paginate(10);
         // produce/index.blade 에 $products 를 보내준다.
-        return view('products.index', compact('products')); //
+        return view('products.index', compact('products'));
     }
 
     //제품 생성
